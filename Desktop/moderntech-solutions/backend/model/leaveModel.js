@@ -7,10 +7,8 @@ export const getLeaveByEmployee = async (employeeId) => {
   );
   return rows;
 };
-
 // Update leave requests for an employee
 export const updateLeaveByEmployee = async (employeeId, leaveRequests) => {
-  // Remove all existing leave requests for the employee
   await pool.query(
     `DELETE FROM leaverequests WHERE Employee_Information_ID = ?`,
     [employeeId]

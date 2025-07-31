@@ -19,7 +19,6 @@ const addAttendance = async (record) => {
   );
   return result;
 };
-
 // Update an attendance record
 const updateAttendance = async (attendance_id, record) => {
   const { status, remarks } = record;

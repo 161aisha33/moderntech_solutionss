@@ -13,11 +13,5 @@ export const pool = mysql.createPool({
     host: process.env.DB_HOST          
 });
 
-// Log the database configuration for debugging
-console.log('Database Config:', {
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    database: process.env.DB_NAME,
-    port: process.env.DB_PORT
-});
+
 

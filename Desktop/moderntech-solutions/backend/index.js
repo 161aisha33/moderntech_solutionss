@@ -3,7 +3,7 @@ import express from 'express';
 import { config } from 'dotenv';
 import { getEmployeeCon, addEmployeeCon, deleteEmployeeCon } from './controller/employeeCon.js';
 import attendanceRoutes from './routes/index.js'; 
-import { getLeaveByEmployee } from './model/leaveModel.js';     
+ 
 
 config(); // Load .env variables
 
