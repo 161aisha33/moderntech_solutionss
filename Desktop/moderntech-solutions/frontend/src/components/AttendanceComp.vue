@@ -38,8 +38,6 @@
       <select v-model="record.status" class="form-control">
         <option value="Present">Present</option>
         <option value="Absent">Absent</option>
-        <option value="Late">Late</option>
-        <option value="Half Day">Half Day</option>
       </select>
     </td>
   </tr>
