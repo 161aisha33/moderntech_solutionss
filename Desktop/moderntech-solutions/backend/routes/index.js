@@ -2,6 +2,7 @@ import express from "express";
 import { getPayroll, getPayrollById } from "../controller/payrollCon.js"; // ⬅️ Import the new function
 import { getPerformanceReviews } from "../controller/performanceCon.js";
 import { putLeave } from "../controller/leaveCon.js";
+import { postLeave } from "../controller/leaveCon.js";
 import { loginUser } from '../controller/authCon.js';
 
 import {
@@ -23,6 +24,7 @@ router.delete("/attendance/:id", delAttendance);
 // Leave route
 router.get("/leave/:id", getLeave);
 router.put("/leave/:id", putLeave);
+router.post("/leave", postLeave); 
 
 // Payroll routes
 router.get("/payroll", getPayroll); // All payroll records
@@ -35,3 +37,4 @@ router.get("/performance", getPerformanceReviews);
 router.post('/login', loginUser);
 
 export default router;
+

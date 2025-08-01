@@ -21,3 +21,10 @@ export const updateLeaveByEmployee = async (employeeId, leaveRequests) => {
     );
   }
 };
+
+export const addLeaveRequest = async (employeeId, from, to, reason, status) => {
+  await pool.query(
+    `INSERT INTO leaverequests (Employee_Information_ID, from_date, to_date, reason, status) VALUES (?, ?, ?, ?, ?)`,
+    [employeeId, from, to, reason, status]
+  );
+};
